@@ -2,11 +2,224 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Tracer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="80" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content {
+      padding: 40px 30px;
+    }
+
+    .policy-section {
+      background: rgba(79, 172, 254, 0.05);
+      border: 1px solid rgba(79, 172, 254, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 20px;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .policy-section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(79, 172, 254, 0.1);
+    }
+
+    .policy-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #4facfe, #00f2fe);
+      border-radius: 0 2px 2px 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: #444;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #4facfe;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    a:hover {
+      background: rgba(79, 172, 254, 0.1);
+      color: #2563eb;
+      transform: translateY(-1px);
+    }
+
+    a::after {
+      content: '→';
+      margin-left: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    a:hover::after {
+      transform: translateX(3px);
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, rgba(79, 172, 254, 0.05) 0%, rgba(0, 242, 254, 0.05) 100%);
+      border: 1px solid rgba(79, 172, 254, 0.2);
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact-label {
+      font-size: 0.9rem;
+      color: #666;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .header {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .content {
+        padding: 30px 20px;
+      }
+
+      .policy-section {
+        padding: 25px 20px;
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>At Tracer, we respect your privacy. We do not collect personal information without consent. Any data shared with us (such as email contact) will only be used to respond to inquiries and provide our services.</p>
-  <p>We do not sell or share your data with third parties. For questions, contact us at <a href="mailto:contact@defitracer.org">contact@defitracer.org</a>.</p>
+  <div class="container">
+    <div class="header">
+      <h1>Privacy Policy</h1>
+      <div class="subtitle">Tracer - Your Privacy Matters</div>
+    </div>
+    
+    <div class="content">
+      <div class="policy-section">
+        <p>At Tracer, we respect your privacy. We do not collect personal information without consent. Any data shared with us (such as email contact) will only be used to respond to inquiries and provide our services.</p>
+        
+        <p>We do not sell or share your data with third parties. For questions, contact us at <a href="mailto:contact@defitracer.org">contact@defitracer.org</a>.</p>
+      </div>
+      
+      <div class="contact-section">
+        <div class="contact-label">Questions?</div>
+        <a href="mailto:contact@defitracer.org">contact@defitracer.org</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
